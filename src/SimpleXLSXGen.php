@@ -132,6 +132,15 @@ class SimpleXLSXGen {
         return (new static())->addSheet( $rows, $sheetName );
     }
 
+    /**
+     * Edit Sheet name
+     * @param string $name
+     * @param int $index 
+     */
+    public function editSheet($name, $index = 0){
+	$this->sheets[$index]['name'] = $name;
+    }	
+	
     public function addSheet( array $rows, $name = null ) {
 
         $this->curSheet++;
